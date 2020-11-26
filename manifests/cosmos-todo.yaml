@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: cosmos-todo
-        image: #{CONTAINER-IMAGE}#:#{CONTAINER-VERSION}#
+        image: acrakflm.azurecr.io/afdemoapp
         ports:
         - containerPort: 8080
         env:
