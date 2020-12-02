@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: afdemoapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: afdemoapp
+  template:
+    metadata:
+      labels:
+        app: afdemoapp 
+    spec:
+      containers:
+        - name: afdemoapp 
+          image: acrakflm.azurecr.io/afdemoapp
+          ports:
+          - containerPort: 443
