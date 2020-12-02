@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cosmos-todo
+  name: afklm
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: cosmos-todo
+      app: afklm
   template:
     metadata:
       labels:
-        app: cosmos-todo
+        app: afklm
     spec:
       containers:
-      - name: cosmos-todo
+      - name: afklm
         image: acrakflm.azurecr.io/afdemoapp
         ports:
         - containerPort: 8080
@@ -33,5 +33,5 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: cosmos-todo
+    app: afklm
   type: LoadBalancer
